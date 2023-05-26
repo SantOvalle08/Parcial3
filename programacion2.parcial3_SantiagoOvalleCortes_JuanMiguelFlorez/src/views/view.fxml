@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane layoutX="24.0" layoutY="14.0" prefHeight="550.0" prefWidth="605.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Untitled Tab 1">
+               <content>
+                  <SplitPane dividerPositions="0.46904315196998125" orientation="VERTICAL" prefHeight="495.0" prefWidth="644.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="197.0" prefWidth="644.0">
+                           <children>
+                              <Separator layoutY="29.0" prefHeight="0.0" prefWidth="644.0" />
+                              <Label layoutX="15.0" layoutY="36.0" text="Nombre:" />
+                              <TextField fx:id="txtNombre" layoutX="14.0" layoutY="56.0" prefHeight="9.0" prefWidth="240.0" />
+                              <Label layoutX="14.0" layoutY="90.0" text="Género:" />
+                              <ComboBox fx:id="comboBoxGenero" layoutX="14.0" layoutY="113.0" prefWidth="150.0" />
+                              <Label layoutX="14.0" layoutY="151.0" text="Numero de Identificacion:" />
+                              <TextField fx:id="txtIdentificacion" layoutX="15.0" layoutY="175.0" prefHeight="25.0" prefWidth="237.0" />
+                              <Label layoutX="381.0" layoutY="48.0" text="Nota 1:" />
+                              <Label layoutX="381.0" layoutY="90.0" text="Nota 2:" />
+                              <Label layoutX="381.0" layoutY="130.0" text="Nota 3:" />
+                              <Label layoutX="381.0" layoutY="172.0" text="Nota 4:" />
+                              <TextField fx:id="txtNota1" layoutX="452.0" layoutY="44.0" />
+                              <TextField fx:id="txtNota2" layoutX="452.0" layoutY="86.0" />
+                              <TextField fx:id="txtNota3" layoutX="452.0" layoutY="126.0" />
+                              <TextField fx:id="txtNota4" layoutX="452.0" layoutY="168.0" />
+                              <Label layoutX="14.0" layoutY="6.0" text="Registrar Estudiantes" />
+                              <Button layoutX="501.0" layoutY="208.0" mnemonicParsing="false" text="Añadir" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="126.0" prefWidth="644.0">
+                           <children>
+                              <Separator layoutY="33.0" prefHeight="0.0" prefWidth="644.0" />
+                              <Label layoutX="14.0" layoutY="14.0" text="Lista de Estudiantes:" />
+                              <TableView layoutX="-1.0" layoutY="33.0" prefHeight="259.0" prefWidth="652.0">
+                                 <columns>
+                                    <TableColumn fx:id="columnNombre" prefWidth="119.0" text="Nombre" />
+                                    <TableColumn fx:id="columnGenero" prefWidth="74.0" text="Genero" />
+                                    <TableColumn fx:id="columnId" prefWidth="115.0" text="Identificacion" />
+                                    <TableColumn fx:id="columnNota1" prefWidth="79.0" text="Nota 1" />
+                                    <TableColumn fx:id="columnNota2" prefWidth="72.0" text="Nota 2" />
+                                    <TableColumn fx:id="ColumnNota3" minWidth="0.0" prefWidth="71.0" text="Nota 3" />
+                                    <TableColumn fx:id="ColumnNota4" minWidth="6.0" prefWidth="81.0" text="Nota 4" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </content>
+          </Tab>
+            <Tab text="Funcionalidades">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Calcular promedio de Estudiante por Identificacion" />
+                        <Label layoutX="14.0" layoutY="377.0" text="Buscar nombre de Estudiante con Mayor Nota Promedio" />
+                        <Label layoutX="14.0" layoutY="240.0" text="Calcular Promedio Total de notas del Curso" />
+                        <Separator layoutY="41.0" prefHeight="0.0" prefWidth="644.0" />
+                        <Label layoutX="23.0" layoutY="59.0" text="Identificacion:" />
+                        <Separator layoutX="-4.0" layoutY="263.0" prefHeight="5.0" prefWidth="650.0" />
+                        <Separator layoutY="371.0" prefHeight="0.0" prefWidth="644.0" />
+                        <Separator layoutX="12.0" layoutY="393.0" prefHeight="0.0" prefWidth="644.0" />
+                        <Separator layoutX="-3.0" layoutY="235.0" prefHeight="5.0" prefWidth="650.0" />
+                        <TextField fx:id="txtIdentPromedio" layoutX="129.0" layoutY="55.0" prefHeight="25.0" prefWidth="516.0" />
+                        <TextArea fx:id="txtAreaPromedio" layoutX="14.0" layoutY="127.0" prefHeight="82.0" prefWidth="622.0" />
+                        <Button fx:id="btnPromedioEstudiante" layoutX="227.0" layoutY="89.0" mnemonicParsing="false" onAction="#promediarEstudiante" text="Calcular Promedio Estudiante" />
+                        <Button fx:id="btnPromedioCurso" layoutX="240.0" layoutY="276.0" mnemonicParsing="false" onAction="#calcularPromedioCurso" text="Calcular Promedio Curso" />
+                        <TextArea fx:id="txtAreaPromedioCurso" layoutX="14.0" layoutY="310.0" prefHeight="49.0" prefWidth="623.0" />
+                        <Button fx:id="btnEstudianteMayorNota" layoutX="258.0" layoutY="403.0" mnemonicParsing="false" onAction="#buscarEstudiante" text="Buscar Estudiante" />
+                        <TextArea fx:id="txtAreaNombreMejor" layoutX="14.0" layoutY="439.0" prefHeight="79.0" prefWidth="622.0" />
+                        <Button fx:id="btnPromedioEstudiante1" layoutX="237.0" layoutY="99.0" mnemonicParsing="false" onAction="#promediarEstudiante" text="Calcular Promedio Estudiante" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
